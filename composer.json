@@ -1,0 +1,21 @@
+{
+    "name": "google/calendar",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "GoogleCalendar\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mohammad H Sahebgharani",
+            "email": "mhsahebgharani@gmail.com"
+        }
+    ],
+    "require": {
+        "google/apiclient": "^2.15"
+    }
+}
