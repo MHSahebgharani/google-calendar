@@ -1,7 +1,7 @@
 {
     "name": "mhsahebgharani/google-calendar",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "google calendar api helper",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "autoload": {
