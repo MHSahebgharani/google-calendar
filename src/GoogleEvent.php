@@ -94,13 +94,11 @@ class GoogleEvent extends GoogleCalendar
     
     public function createEvent(): Event
     {
-
         return $this->service->events->insert($this->calendarId, $this->event, ['conferenceDataVersion' => $this->conferenceDataVersion]);
     }
 
     public function updateEvent($eventId): object
     {
-        return $this->event->
         $this->service->events->update($this->calendarId, $eventId, $this->event, ['conferenceDataVersion' => $this->conferenceDataVersion]);
         return (object)['message' => 'Event updated successfully', 'status' => 200];
     }
