@@ -16,9 +16,10 @@ class GoogleEvent extends GoogleCalendar
     public int $conferenceDataVersion = 0;
     public Event $event;
 
-    public function newEvent()
+    public function __construct(Event $event)
     {
-        $this->event = new Google_Service_Calendar_Event();
+        parent::__construct();
+        $this->event = $event;
     }
 
     public function setName($name): void
@@ -86,6 +87,11 @@ class GoogleEvent extends GoogleCalendar
         return $this->service->events->get($this->calendarId, $id);
     }
 
+    public function setEvent(Event $event): void
+    {
+        $this->event = $event;
+    }
+    
     public function createEvent(): Event
     {
 
@@ -94,6 +100,7 @@ class GoogleEvent extends GoogleCalendar
 
     public function updateEvent($eventId): object
     {
+        return $this->event->
         $this->service->events->update($this->calendarId, $eventId, $this->event, ['conferenceDataVersion' => $this->conferenceDataVersion]);
         return (object)['message' => 'Event updated successfully', 'status' => 200];
     }
