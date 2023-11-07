@@ -65,6 +65,10 @@ class GoogleEvent extends GoogleCalendar
         $this->event->setConferenceData($conferenceData);
         $this->conferenceDataVersion = 1;
     }
+    public function setAnyoneCanAddSelf($anyoneCanAddSelf): void
+    {
+        $this->event->setAnyoneCanAddSelf($anyoneCanAddSelf);
+    }
 
     public function setAttendees(array $attendees): void
     {
