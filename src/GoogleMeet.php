@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Meet;
+namespace GoogleCalendar;
 
 use Google_Service_Meet;
 use Illuminate\Support\Facades\Http;
