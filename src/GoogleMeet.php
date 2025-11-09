@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Http;
 class GoogleMeet
 {
     public Google_Service_Meet $service;
+    public Google_Client $client;
     public string $calendarId;
     public string $timezone;
     public int $conferenceDataVersion = 0;
@@ -15,6 +16,7 @@ class GoogleMeet
     public function __construct()
     {
         $this->service = GoogleMeetFactory::createGoogleService();
+        $this->client = GoogleMeetFactory::createGoogleServiceClient();
     }
 
     public function meet($meetId, $email)
