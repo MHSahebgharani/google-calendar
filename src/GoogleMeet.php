@@ -14,7 +14,7 @@ class GoogleMeet
 
     public function __construct()
     {
-        $this->service = GoogleFactory::createGoogleService();
+        $this->service = GoogleMeetFactory::createGoogleService();
     }
 
     public function meet($meetId, $email)
