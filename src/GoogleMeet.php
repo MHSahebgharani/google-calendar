@@ -3,6 +3,8 @@
 namespace GoogleCalendar;
 
 use Google_Service_Meet;
+use Google_Client;
+
 use Illuminate\Support\Facades\Http;
 
 class GoogleMeet
